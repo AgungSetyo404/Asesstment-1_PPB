@@ -15,6 +15,7 @@
         android:layout_marginEnd="32dp"
         android:text="@string/title"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Answer_Layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="100"
+        android:text="97"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -33,21 +34,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.24" />
 
-    <Button
-        android:id="@+id/Check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Check"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="269dp" />
-
     <TextView
         android:id="@+id/operator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text=" x"
+        android:text="+"
         app:layout_constraintBottom_toBottomOf="@+id/bil1"
         app:layout_constraintStart_toEndOf="@+id/bil1"
         app:layout_constraintTop_toTopOf="@+id/bil1" />
@@ -57,35 +49,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="100"
         app:layout_constraintBottom_toBottomOf="@+id/operator"
         app:layout_constraintStart_toEndOf="@+id/operator"
-        app:layout_constraintTop_toTopOf="@+id/operator" />
+        app:layout_constraintTop_toTopOf="@+id/operator"
+        android:text="74" />
 
     <TextView
         android:id="@+id/equal_sym"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:text="="
         app:layout_constraintBottom_toBottomOf="@+id/bil2"
         app:layout_constraintStart_toEndOf="@+id/bil2"
         app:layout_constraintTop_toTopOf="@+id/bil2" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/Answer_Layout"
         android:layout_width="153dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/bil2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/equal_sym"
         app:layout_constraintTop_toTopOf="@+id/bil2">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Answer_Input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Answer" />
+            android:hint="@string/Answer_hint"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Check"
+        app:layout_constraintBottom_toTopOf="@id/Generate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equal_sym" />
 
     <Button
         android:id="@+id/Generate"
@@ -111,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Correct Answer!!!"
+        tools:text="Correct Answer!!!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />

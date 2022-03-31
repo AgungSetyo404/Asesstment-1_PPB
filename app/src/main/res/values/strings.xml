@@ -2,4 +2,13 @@
     <string name="app_name">Math Challenge</string>
 
     <string name="title">Challenge ur Math now!</string>
+    <string name="Answer_hint">Answer</string>
+    <string name="answer_invalid">please enter your answer</string>
+    <string name="answer_wrong">your answer %1$s was wrong</string>
+    <string name="notification">button pressed</string>
+    <string name="angka1">97</string>
+    <string name="angka2">74</string>
+
+    <string name="respond_x">button pressed</string>
+    <string name="result_x">Yes! The Correct Answer is %1$s!</string>
 </resources>
