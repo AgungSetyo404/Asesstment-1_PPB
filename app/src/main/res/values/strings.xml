@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Math Challenge</string>
+
+    <string name="title">Challenge ur Math now!</string>
 </resources>
